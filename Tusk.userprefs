@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Dropbox\Tusk\Assets\Scriptz\Arena_Manager.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scriptz\Arena_Manager.js">
     <Files>
-      <File FileName="..\..\Dropbox\Tusk\Assets\Scriptz\Arena_Manager.js" Line="13" Column="2" />
+      <File FileName="Assets\Scriptz\Arena_Manager.js" Line="7" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
