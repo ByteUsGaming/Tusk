@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scriptz\Player.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scriptz\FlamethrowerShoot.js">
     <Files>
-      <File FileName="Assets\Scriptz\Player.js" Line="30" Column="51" />
-      <File FileName="Assets\Scriptz\spawnEnemy.js" Line="12" Column="15" />
-      <File FileName="Assets\Scriptz\Arena_Manager.js" Line="10" Column="2" />
+      <File FileName="Assets\Scriptz\PistolShoot.js" Line="20" Column="2" />
+      <File FileName="Assets\Scriptz\FlamethrowerShoot.js" Line="35" Column="1" />
+      <File FileName="Assets\Scriptz\ShotgunShoot.js" Line="24" Column="24" />
+      <File FileName="Assets\Scriptz\LaserRifleShoot.js" Line="26" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
