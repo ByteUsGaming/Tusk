@@ -17,7 +17,7 @@ function Update ()
 	canFire = false;
 	chargeTime = 3.0;
 	//GetComponent.<AudioSource>().Play();
-	var shotFired = Instantiate(bullet, transform.position, transform.rotation *Quaternion.Euler(0, 0, -90));
+	var shotFired = Instantiate(bullet, transform.position, transform.rotation *Quaternion.Euler(0, 0, 90));
     shotFired.GetComponent.<Rigidbody>().AddRelativeForce(0,bulletSpeed,0);
     
 	}
