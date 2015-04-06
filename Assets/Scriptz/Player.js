@@ -64,7 +64,7 @@ function Update () {
     Wait(0.25);
     canShoot = true;
 		}*/
-		
+	
 
 
     //Other
@@ -127,11 +127,13 @@ function getMoney(amt:int){
 	credits += amt;
 }
 
+	// Assign Keynum to the key you picked up
 function getKey(key:int){
 	hasKey = true;
-	keyNum += key;
+	keyNum = key;
 }
 
+	// if you have that key, use it
 function useKey(keyNeed:int){
 	if(keyNeed == keyNum){
 		return keyNeed;
@@ -176,3 +178,8 @@ function ChangeWeapons(){
 	currentGun.SetActive(true);
 	secondGun.SetActive(false);
  }
+	// Switch current gun with a new gun (pickup or purchase)
+function SwapWeapon(newGun:GameObject) {
+	currentGun = newGun;
+}
+

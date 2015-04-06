@@ -1,6 +1,5 @@
 var bullet:GameObject;
 var bulletSpeed:float= 1000;
-var ignoredPlayer:CharacterController;
 var fireRate:float = 0.2;
 private var nextFire:float = 0.0;
 var canFire:boolean = true;
@@ -14,7 +13,6 @@ function Update(){
 	for(var rot = -30.0; rot <= 30; rot+=15){
 	var shotFired = Instantiate(bullet, transform.position, transform.rotation*Quaternion.Euler(0, rot, 0));
     shotFired.GetComponent.<Rigidbody>().AddRelativeForce(0,-bulletSpeed,0);
-    Physics.IgnoreCollision(shotFired.GetComponent.<Collider>(), ignoredPlayer);
     }
     canFire = false;
     Wait(1.0);

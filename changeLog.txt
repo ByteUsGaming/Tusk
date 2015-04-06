@@ -1,0 +1,38 @@
+____1/28/15
+Carl
+--------------------------
+-Added level1 to build settings
+-Added Return to Main Menu  button on death skin UI(text looks blurry?)
+-Added Heal() method(love it)
+-MedKit object + script added
+-Renamed Worm sounds to Baurag
+-Added walking sound effect to Kay // disabled
+
+
+____1/29/15
+Carl
+--------------------------------
+-Added tons of level design(we needed more than one room xD)
+-Added Enemy Spawners! (hooray! nice touch with the random)
+-Found out why Prefabs are fucking up
+-Tweaked monster behavior scripts
+
+____1/30/15
+Carl
+--------------------------------
+-added doors
+-added credit HUD UI
+-added kay model
+-
+
+____2/1/15
+Carl
+----------------------
+-Changed Follow script (No longer needs gameobject variable)
+- added credit animation + gameobject +script + updated UI
+-pause now works 100% (changed input receiver from Kay to Camera)
+-pause is now a function (for other events/objects to call pause)
+-Added shop script + test UI
+
+
+

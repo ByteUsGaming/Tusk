@@ -6,11 +6,11 @@ function OnGUI () {
 	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+150,100,100),"Carl Amko",creditsStyle);
 	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+175,100,100),"Co-Founder, Lead Game Developer, Sr. User Interface Designer",creditsStyle);
 	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+225,100,100),"Evan Clendenning",creditsStyle);
-	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+250,100,100),"Co-Founder, Lead Game Developer",creditsStyle);
+	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+250,100,100),"Co-Founder, Lead Game Developer, Sr. AI Developer",creditsStyle);
 	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+300,100,100),"Sarah McLean",creditsStyle);
-	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+325,100,100),"Co-Founder, Sr. Lorewriter",creditsStyle);
+	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+325,100,100),"Co-Founder, Sr. Lorewriter, Concept Writer",creditsStyle);
 	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+375,100,100),"Kevin Portuondo",creditsStyle);
-	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+400,100,100),"Lorewriter, Game Tester, Graphic Designer",creditsStyle);
+	GUI.Label(Rect(Screen.width/2-50,Screen.height/8+400,100,100),"Lead Writer, Concept Designer",creditsStyle);
 	//GUI.Label(Rect(Screen.width/2-50,Screen.height/8+300,100,100),"David Schulman",creditsStyle);
 	//GUI.Label(Rect(Screen.width/2-50,Screen.height/8+325,100,100),"TBA",creditsStyle);
 	

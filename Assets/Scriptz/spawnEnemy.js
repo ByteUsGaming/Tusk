@@ -1,11 +1,20 @@
 ﻿#pragma strict
 
-var Enemies:GameObject[];
+// EDITED FOR HORDE MODE ONLY
 
-function Start () {
-	spawnEnemy();
+var Enemies:GameObject[];
+var canSpawn:boolean = false;
+
+function Update() {
+
+	if(canSpawn) {
+		canSpawn = false;
+		spawnEnemy();
+	} 
 }
 
-function spawnEnemy(){
+function spawnEnemy() {
+	// Spawn enemy from spawner
 	Instantiate(Enemies[Random.Range(0,Enemies.Length)],gameObject.transform.position,gameObject.transform.rotation);
-	}
+
+}

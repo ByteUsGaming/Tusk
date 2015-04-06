@@ -3,6 +3,8 @@ var life = 500;
 var MoveSpeed = 50;
 var Charging = false;
 var Poison : GameObject;
+var LootTable:GameObject[];
+
 function Start(){
 }
 function Update () 
@@ -15,27 +17,42 @@ function Update ()
 	}
    //Enemy death behavior
 	if(life <= 0){
-		life = 0;
-		//Death animation
-		Destroy(gameObject); 
+		Death();
 		}
 	}
 
 	//Enemy takes damage
 function OnCollisionEnter(other:Collision){
-if(other.gameObject.tag == "Shotgun"){
+switch(other.gameObject.tag){
+	
+	case "Shotgun":
   	life -= 10;
-  	Charging=false;
-	}
-if(other.gameObject.tag == "Pistol"){
-  	life -= 20;
-  	Charging=false;
-	}	
-	}
+	break;
 	
-
+	case "Pistol":
+  	life -= 15;
+	break;
 	
-	function OnTriggerStay(other:Collider){
+	case "LaserRifle":
+	life -= 50;
+	break;
+	
+	}
+	Charging = false;	
+}
+	
+function Death(){
+		//Death animation
+		Destroy(gameObject); 
+		
+		//Drop Loot
+		Instantiate(LootTable[Random.Range(0,LootTable.Length)],gameObject.transform.position, gameObject.transform.rotation);
+		
+		// Death Sound
+		//GameObject.Find("Camera").GetComponent(AudioSource).PlayOneShot(Diedie,0.3);
+}
+	
+function OnTriggerStay(other:Collider){
 	if(other.gameObject.CompareTag("Player")){
 	if(!Charging){
 	transform.LookAt(Player.transform);
@@ -47,9 +64,18 @@ if(other.gameObject.tag == "Pistol"){
 	}
 	}
 	}
-	function OnTriggerEnter(other:Collider){
-	if(other.gameObject.CompareTag("Player")){
-	//cockahogAudio.PlayOneShot(Aggro);
-	}
-	}
+	function OnTriggerEnter(other:Collider) {
+	switch(other.tag){
 	
+	case "Flamethrower":
+	life -=8;
+	break;
+	
+	case "Player":
+	//cockahogAudio.PlayOneShot(Aggro);
+	break;
+	
+	default:
+	break;
+	}
+}

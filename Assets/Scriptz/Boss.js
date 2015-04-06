@@ -5,10 +5,11 @@ var MoveSpeed = 2;
 var bossProjectile1:GameObject;
 var bossProjectile2:GameObject;
 var bulletSpeed:float = 500;
-var victory:GameObject;
+//var victory:GameObject;
 var attackAudio:AudioSource;
+var NoExit:GameObject;
 function Awake(){
-	victory.SetActive(false);
+	//victory.SetActive(false);
 }
 
 function Update () 
@@ -66,12 +67,26 @@ function Attack2(){
 }
  	//On Boss Death
 function Death(){
-	victory.SetActive(true);
+	//victory.SetActive(true);
 }
 
 	//Enemy takes damage
-function OnCollisionEnter(){
-  	life -= 25;
+function OnCollisionEnter(other:Collision){
+  	switch(other.gameObject.tag){
+	
+	case "Shotgun":
+  	life -= 10;
+	break;
+	
+	case "Pistol":
+  	life -= 15;
+	break;
+	
+	case "LaserRifle":
+	life -= 50;
+	break;
+	
+	}
 	}
 	//Lock door, begin boss attack, Look at Player
 function OnTriggerStay(hit: Collider){
@@ -83,3 +98,6 @@ function OnTriggerStay(hit: Collider){
 	Attack2();
 		}	
 	}
+function OnTriggerEnter(){
+	NoExit.SetActive(true);
+}
