@@ -18,7 +18,7 @@ function Update ()
 	chargeTime = 3.0;
 	//GetComponent.<AudioSource>().Play();
 	var shotFired = Instantiate(bullet, transform.position, transform.rotation *Quaternion.Euler(0, 0, 90));
-    shotFired.GetComponent.<Rigidbody>().AddRelativeForce(0,bulletSpeed,0);
+    shotFired.GetComponent.<Rigidbody>().AddRelativeForce(Vector3.forward*bulletSpeed);
     
 	}
 	//Enemy death behavior
