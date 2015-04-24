@@ -13,7 +13,7 @@ function Start () {
 
 // Update is called once per frame
 function Update () {
- if (Input.GetButton("Fire1") && canFire){
+ if (Input.GetButton("Fire1") && canFire && currentAmmo > 0){
 	//GetComponent.<AudioSource>().Play();
 	canFire = false;
 	Wait(fireRate);

@@ -3,7 +3,7 @@ var life:float = 100;
 var MoveSpeed = 8;
 var bullet:GameObject;
 var bulletSpeed:float= 1000;
-var chargeTime:float;
+var chargeTime:float = 1.0;
 var canFire:boolean = true;
 var MaxDist = 0;
 var open:Material;
@@ -11,7 +11,7 @@ var closed:Material;
 var MinDist = 0;
 var damage:float = 20.0;
 var LootTable:GameObject[];
-var blink:boolean=true;
+var blink:boolean = true;
 var rend: Renderer;
 function Start() {
 	rend = GetComponent.<Renderer>();
@@ -19,13 +19,13 @@ function Start() {
 }
 function Update () 
 	{
-	if(blink==true){
-	rend.material=closed;
+	if(blink == true){
+	rend.material = closed;
 	}
 	else{
-	rend.material=open;
+	rend.material = open;
 	}
-	// Barug movement behavior
+	// Movement behavior
 	var controller:CharacterController = GetComponent(CharacterController);
     transform.LookAt(player.transform);
     if( Vector3.Distance(transform.position,player.transform.position) <= MaxDist && Vector3.Distance(transform.position,player.transform.position)>= MinDist){
@@ -56,7 +56,7 @@ function Death() {
 }
 
 function OnCollisionEnter(other:Collision){
-if(blink==false){
+if(blink == false){
 	switch(other.gameObject.tag){
 	
 	case "Shotgun":
@@ -102,12 +102,12 @@ function takeEnvironDmg(amt : int){
 	life -= amt;
 }
 function Shoot(){
-var shotFired = Instantiate(bullet, transform.position, transform.rotation);
-shotFired.GetComponent.<Rigidbody>().AddRelativeForce(Vector3.forward*bulletSpeed);
-yield WaitForSeconds(1);
-blink=true;
-canFire=false;
-ChargeTheLaser();
+	var shotFired = Instantiate(bullet, transform.position, transform.rotation);
+	shotFired.GetComponent.<Rigidbody>().AddRelativeForce(Vector3.forward*bulletSpeed);
+//	yield WaitForSeconds(1);
+//	blink = true;
+	canFire = false;
+	ChargeTheLaser();
 }
 function ChargeTheLaser() {
 WaitForSeconds(chargeTime);
