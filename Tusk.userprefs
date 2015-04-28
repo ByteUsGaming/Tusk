@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scriptz\Boom_Bloom.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scriptz\Armerlin.js">
     <Files>
-      <File FileName="Assets\Scriptz\Boom_Bloom.js" Line="102" Column="1" />
-      <File FileName="Assets\Scriptz\Arena_Manager.js" Line="1" Column="1" />
-      <File FileName="Assets\Scriptz\Armerlin.js" Line="106" Column="84" />
+      <File FileName="Assets\Scriptz\Armerlin.js" Line="13" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
