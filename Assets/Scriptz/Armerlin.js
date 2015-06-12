@@ -1,4 +1,5 @@
-﻿var player : GameObject;
+﻿var player;
+player = GameObject.FindGameObjectWithTag("Player");
 var life:float = 100;
 var MoveSpeed = 8;
 var bullet:GameObject;
@@ -27,7 +28,9 @@ function Update ()
 	}
 	// Movement behavior
 	var controller:CharacterController = GetComponent(CharacterController);
-    transform.LookAt(player.transform);
+     var dir = player.transform.position - transform.position;
+  	var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+ 	transform.LookAt(player.transform.position);
     if( Vector3.Distance(transform.position,player.transform.position) <= MaxDist && Vector3.Distance(transform.position,player.transform.position)>= MinDist){
          controller.Move(transform.forward*MoveSpeed*Time.deltaTime);
    }
@@ -44,7 +47,6 @@ function Update ()
 	}
 	// Death Handling
 function Death() {
-
 		//Death animation
 		Destroy(gameObject); 
 		

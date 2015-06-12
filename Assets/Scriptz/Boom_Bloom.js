@@ -1,4 +1,5 @@
-﻿var player : GameObject;
+﻿var player;
+player = GameObject.FindGameObjectWithTag("Player");
 var life:float = 500;
 var bullet:GameObject;
 var bulletSpeed:float= 1000;

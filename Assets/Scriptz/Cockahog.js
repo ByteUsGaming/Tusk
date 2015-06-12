@@ -1,4 +1,5 @@
-﻿var player : GameObject;
+﻿var player;
+player = GameObject.FindGameObjectWithTag("Player");
 var life:float = 500;
 var MoveSpeed = 50;
 var StunTime:int = 2;

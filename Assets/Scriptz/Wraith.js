@@ -1,4 +1,5 @@
-﻿var Player : GameObject;
+﻿var player;
+player = GameObject.FindGameObjectWithTag("Player");
 var life = 500;
 var MoveSpeed = 50;
 var Charging = false;
@@ -55,7 +56,7 @@ function Death(){
 function OnTriggerStay(other:Collider){
 	if(other.gameObject.CompareTag("Player")){
 	if(!Charging){
-	transform.LookAt(Player.transform);
+	transform.LookAt(player.transform);
 	var cloud = Instantiate(Poison,gameObject.transform.position,gameObject.transform.rotation*Quaternion.Euler(0, 0, 0));
 	yield;
 	GetComponent.<Rigidbody>().velocity=transform.forward*MoveSpeed;
